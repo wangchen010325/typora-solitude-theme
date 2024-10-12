@@ -1,0 +1,322 @@
+/* FONTS */
+@font-face {
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./vercel/Geist[wght].woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "GeistMono";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./vercel/GeistMono[wght].woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Geist";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./vercel/InterVariable-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "iconfont";
+  src: url("./vercel/iconfont.ttf") format("truetype");
+}
+
+/* VARIABLES */
+:root {
+  /* COLORS */
+  --v-background: #ffffff;
+  --v-gray-1000: #171717;
+  --v-gray-900: #666666;
+  --v-gray-800: #7d7d7d;
+  --v-gray-700: #8f8f8f;
+  --v-gray-600: #a8a8a8;
+  --v-gray-500: #c9c9c9;
+  --v-purple-600: #bf89ec;
+  --v-purple-800: #763da9;
+  --v-red-600: #f87275;
+  --v-red-800: #da2f35;
+  --v-amber-600: #f5b047;
+  --v-amber-800: #ff990a;
+  --v-green-600: #6cda75;
+  --v-green-800: #398e4a;
+  --v-blue-600: #52aeff;
+  --v-blue-700: #0072f5;
+  --v-blue-800: #0062d1;
+}
+
+/* THEME CUSTOM */
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Geist";
+  background-color: var(--v-background);
+  color: var(--v-gray-1000);
+  line-height: 1.6;
+}
+
+#write {
+  padding: 10px;
+  max-width: 80%;
+}
+
+/* YAML */
+pre.md-meta-block {
+  margin: 20px 0px;
+  padding: 10px;
+  font-family: "Geist";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--v-gray-900);
+  background-color: var(--v-background);
+  border-bottom: 1px dashed var(--v-gray-900);
+}
+
+/* HEADING */
+h1 {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+}
+h2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 2rem;
+}
+h4 {
+  font-size: 1.25em;
+}
+h5 {
+  font-size: 1em;
+}
+h6 {
+  font-size: 1em;
+}
+
+/* BLOCKQUOTE */
+blockquote {
+  position: relative;
+  padding: 15px;
+  border: 1px solid var(--v-gray-500);
+  border-radius: 8px;
+  color: var(--v-gray-800);
+}
+
+blockquote::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-45%);
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e826";
+}
+
+blockquote .md-end-block {
+  margin-left: 30px;
+}
+
+.md-alert {
+    position: relative;
+    padding: 15px;
+   
+}
+
+.md-alert > p:first-child {
+    display: none;
+}
+
+.md-alert > p {
+    margin: 0px 0px 0px 30px;
+    padding: 0px;
+}
+
+.md-alert.md-alert-important {
+    border: 1px solid var(--v-purple-600);
+    border-radius: 8px;
+    color: var(--v-purple-800);
+}
+
+.md-alert.md-alert-important::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-45%);
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e826";
+}
+
+.md-alert.md-alert-caution {
+    border: 1px solid var(--v-red-600);
+    border-radius: 8px;
+    color: var(--v-red-800);
+}
+
+.md-alert.md-alert-caution::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-45%);
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e826";
+}
+
+.md-alert.md-alert-warning {
+    border: 1px solid var(--v-amber-600);
+    border-radius: 8px;
+    color: var(--v-amber-800);
+}
+
+.md-alert.md-alert-warning::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-45%);
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e826";
+}
+
+.md-alert.md-alert-tip {
+    border: 1px solid var(--v-green-600);
+    border-radius: 8px;
+    color: var(--v-green-800);
+}
+
+.md-alert.md-alert-tip::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-45%);
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e826";
+}
+
+.md-alert.md-alert-note {
+    border: 1px solid var(--v-blue-600);
+    border-radius: 8px;
+    color: var(--v-blue-800);
+}
+
+.md-alert.md-alert-note::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-45%);
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e826";
+}
+
+/* COMMENT */
+.md-comment{
+    color: var(--v-gray-900);
+    font-family: 'GeistMono';
+}
+
+/* LINK */
+#write a {
+    font-weight: 500    ;
+    color: var(--v-blue-700);
+    text-decoration: none;
+}
+
+#write a:hover {
+    background-image: linear-gradient(var(--v-blue-700),var(--v-blue-700));
+    background-size: 100% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+}
+
+/* KBD */
+kbd {
+    font-family: 'GeistMono';
+    padding: 2px 8px;
+    vertical-align: baseline;
+    font-size: 0.9rem;
+    color: var(--v-background);
+    border: none;
+    box-shadow: none;
+    border-radius: 4px;
+    background-color: var(--v-gray-800)   
+}
+
+/* HIGHTLIGHT */
+#write mark {
+    background-color: var(--v-blue-600);
+    border-radius: 3px;    
+}
+
+/* HORIZON */
+hr {
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid var(--v-gray-500);
+}
+
+/* FOOTNOTE */
+sup.md-footnote {
+    font-family: 'GeistMono';
+    color: var(--v-gray-800)
+}
+
+.md-def-name {
+    padding: 0px 8px;
+    font-family: 'GeistMono';
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.md-def-footnote .md-def-name::before {
+    content: '[';
+}
+
+.md-def-name::after {
+    right: -17px;
+}
+
+.md-def-content {
+    font-size: 1.0rem;
+    color: var(--v-gray-1000);
+}
+
+/* FORMULA */
+.md-inline-math {
+    color: var(--v-blue-800);
+}
+
+/* INLINE CODE */
+#write code {
+    padding: 2px 4px;
+    font-family: 'GeistMono';
+    font-size: 0.9rem;
+    background-color: var(--v-gray-500);
+    border-radius: 4px;
+}
