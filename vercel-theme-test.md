@@ -9,15 +9,23 @@ tags: theme
 
 ## Working with Domain
 
+## hello this work
+
+## Coding this work
+
 ### View and Seach Domain
 
 #### DNS Domoin
 
 ##### what is dome
 
+## Loving this work
+
 ###### hygren
 
-> 
+> hello world
+
+> hello world
 
 > [!IMPORTANT]
 >
@@ -53,7 +61,7 @@ A domain is a user-friendly way of referring to the address [hello](www.baidu.co
 
 <kbd>CTRL</kbd><kbd>Shift</kbd><kbd>Alt</kbd>
 
-The **system** that *manages* the details about where a site is located on the internet, is known as DNS or the ==Domain Name System==. At its most basic, DNS maps <u>human-readable</u> domain names to computer-friendly IP addresses. When you request a site in your browser, the first step[^1] is converting[^2] the domain address to an IP address. That process is handled by DNS and called DNS Resolution. Understanding how DNS works is important to ensure that you are configuring your domain correctly.
+The **system** that *manages* the details about where a site is <del>located</del> on the internet, is known as DNS or the ==Domain Name System==. At its most basic, DNS maps <u>human-readable</u> domain names to computer-friendly IP ***addresses***. When you request a site in your browser, the first step[^1] is converting[^2] the domain address to an IP address. That process is handled by DNS and called DNS Resolution. Understanding how DNS works is important to ensure that you are configuring your domain correctly.
 
 ---
 
@@ -75,13 +83,79 @@ $$
 
 `hello ts`
 
+1. list one content
+2. list two content
+3. list three content
+
+- hello first
+
+- no second
+
+- 
+
+
+
+- [ ] one
+- [ ] two
+
+
+
+![](C:\Users\Teclado\Downloads\life4.jpg)
+
+| Title1asdasdasdasdasdas | Title2asdasdasd | Title3asdasdasdasdasda |
+|:-----:|:-----:|:-----:|
+| Cell1 | Cell2 | Cell3 |
+| [Cell4](he) | Cell5 | Cell6 |
+| Cell7 | Cell8 | Cell9 |
 
 
 
 
 
+[TOC]
 
 
+
+```typescript
+import { NextApiRequest, NextApiResponse } from 'next';
+ 
+export default function handler(
+  request: NextApiRequest,
+  response: NextApiResponse,
+) {
+  // Use 308 for a permanent redirect, 307 for a temporary redirect
+  return response.redirect(307, '/new-route');
+}
+```
+
+```html
+<div>
+  <head>
+    <meta name="og:title" content="Vercel Edge Network" />
+    <meta name="og:description" content="Vercel Edge Network" />
+    <meta name="og:image" content={ // Because OG images must have a absolute
+    URL, we use the // `VERCEL_URL` environment variable to get the deployment’s
+    URL. // More info: // https://vercel.com/docs/projects/environment-variables
+    `${ process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : ''
+    }/api/vercel` } />
+    <meta
+      name="og:url"
+      content="https://vercel.com/docs/edge-network/overview"
+    />
+  </head>
+  <h1>A page with Open Graph Image.</h1>
+</div>
+```
+
+```bash
+npm i -g vercel
+```
+
+
+
+  
+
+  
 
 
 
