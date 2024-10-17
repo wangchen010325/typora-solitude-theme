@@ -23,10 +23,23 @@
   src: url("./vercel/InterVariable-Italic.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "LXGWWenKai";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./vercel/LXGWWenKai-Regular.ttf") format("truetype");
+}
 
 @font-face {
-  font-family: 'iconfont';
-  src: url(./vercel/iconfont.woff2) format('woff2');
+  font-family: "LXGWWenKaiMono";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./vercel/LXGWWenKaiMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "iconfont";
+  src: url("./vercel/iconfont.woff2") format("woff2");
 }
 
 /* VARIABLES */
@@ -41,44 +54,70 @@
   --v-gray-600: #a8a8a8;
   --v-gray-500: #c9c9c9;
   --v-gray-400: #eaeaea;
-  --v-purple-600: #bf89ec;
-  --v-purple-800: #763da9;
-  --v-red-600: #f87275;
-  --v-red-800: #da2f35;
-  --v-amber-600: #f5b047;
-  --v-amber-800: #ff990a;
-  --v-green-600: #6cda75;
-  --v-green-800: #398e4a;
+  --v-purple-700: #8e4ec6;
+  --v-purple-900: #7820bc;
+  --v-red-700: #e5484d;
+  --v-red-900: #cb2a2f;
+  --v-amber-700: #f5b047;
+  --v-amber-900: #a35200;
+  --v-green-700: #45a557;
+  --v-green-900: #297a3a;
   --v-blue-600: #52aeff;
   --v-blue-700: #0072f5;
-  --v-blue-800: #0062d1;
+  --v-blue-900: #0068d6;
   --v-background: #282c34;
+  --monospace: "GeistMono", "LXGWWenKaiMono";
+}
+/* PRINT */
+@media print {
+  html {
+    font-size: 14px;
+  }
+  pre {
+    page-break-inside: avoid;
+    word-wrap: break-word;
+  }
+  blockquote p {
+    margin-left: 30px;
+  }
 }
 
 /* THEME CUSTOM */
-
 html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  font-family: "Geist";
   background-color: var(--v-white-100);
   color: var(--v-gray-1000);
   line-height: 1.6;
 }
 
 #write {
-  padding: 10px;
-  max-width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 860px;
+  font-family: "Geist", "LXGWWenKai";
+}
+
+@media only screen and (min-width: 1400px) {
+  #write {
+    max-width: 1024px;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  #write {
+    max-width: 1200px;
+  }
 }
 
 /* YAML */
 pre.md-meta-block {
   margin: 20px 0px;
   padding: 10px;
-  font-family: "Geist";
+  font-family: "Geist", "LXGWWenKai";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
@@ -108,21 +147,24 @@ h5 {
 }
 h6 {
   font-size: 1em;
+  color: var(--v-gray-900);
 }
 
 /* BLOCKQUOTE */
 blockquote {
   position: relative;
-  padding: 15px;
+  padding: 12px;
   border: 1px solid var(--v-gray-500);
+  line-height: 1.4;
   border-radius: 8px;
-  color: var(--v-gray-800);
+  color: var(--v-gray-900);
 }
 
-blockquote::before {
+#write blockquote::before {
   position: absolute;
   top: 50%;
-  transform: translateY(-45%);
+
+  transform: translateY(-55%) translateX(5%);
   font-family: "iconfont" !important;
   font-size: 16px;
   font-style: normal;
@@ -131,13 +173,14 @@ blockquote::before {
   content: "\e826";
 }
 
-blockquote .md-end-block {
+#write blockquote > p.md-end-block {
   margin-left: 30px;
 }
 
 .md-alert {
   position: relative;
   padding: 15px;
+  line-height: 1.4;
 }
 
 .md-alert > p:first-child {
@@ -149,70 +192,74 @@ blockquote .md-end-block {
   padding: 0px;
 }
 
+.md-alert[mdtype="blockquote"] {
+  padding: 12px;
+}
+
 .md-alert.md-alert-important {
-  border: 1px solid var(--v-purple-600);
+  border: 1px solid var(--v-purple-700);
   border-radius: 8px;
-  color: var(--v-purple-800);
+  color: var(--v-purple-900);
 }
 
 .md-alert.md-alert-important::before {
   position: absolute;
   top: 50%;
-  transform: translateY(-45%);
+  transform: translateY(-55%);
   font-family: "iconfont" !important;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: "\e631";
+  content: "\e643";
 }
 
 .md-alert.md-alert-caution {
-  border: 1px solid var(--v-red-600);
+  border: 1px solid var(--v-red-700);
   border-radius: 8px;
-  color: var(--v-red-800);
+  color: var(--v-red-900);
 }
 
 .md-alert.md-alert-caution::before {
   position: absolute;
   top: 50%;
-  transform: translateY(-45%);
+  transform: translateY(-50%);
   font-family: "iconfont" !important;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: "\e605";
+  content: "\e62c";
 }
 
 .md-alert.md-alert-warning {
-  border: 1px solid var(--v-amber-600);
+  border: 1px solid var(--v-amber-700);
   border-radius: 8px;
-  color: var(--v-amber-800);
+  color: var(--v-amber-900);
 }
 
 .md-alert.md-alert-warning::before {
   position: absolute;
   top: 50%;
-  transform: translateY(-45%);
+  transform: translateY(-60%);
   font-family: "iconfont" !important;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: "\e682";
+  content: "\e612";
 }
 
 .md-alert.md-alert-tip {
-  border: 1px solid var(--v-green-600);
+  border: 1px solid var(--v-green-700);
   border-radius: 8px;
-  color: var(--v-green-800);
+  color: var(--v-green-900);
 }
 
 .md-alert.md-alert-tip::before {
   position: absolute;
   top: 50%;
-  transform: translateY(-45%);
+  transform: translateY(-50%);
   font-family: "iconfont" !important;
   font-size: 16px;
   font-style: normal;
@@ -222,27 +269,27 @@ blockquote .md-end-block {
 }
 
 .md-alert.md-alert-note {
-  border: 1px solid var(--v-blue-600);
+  border: 1px solid var(--v-blue-700);
   border-radius: 8px;
-  color: var(--v-blue-800);
+  color: var(--v-blue-900);
 }
 
 .md-alert.md-alert-note::before {
   position: absolute;
   top: 50%;
-  transform: translateY(-45%);
+  transform: translateY(-50%);
   font-family: "iconfont" !important;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: "\e60f";
+  content: "\e63c";
 }
 
 /* COMMENT */
 .md-comment {
   color: var(--v-gray-900);
-  font-family: "GeistMono";
+  font-family: "GeistMono", "LXGWWenKai";
 }
 
 /* LINK */
@@ -261,7 +308,7 @@ blockquote .md-end-block {
 
 /* KBD */
 kbd {
-  font-family: "GeistMono";
+  font-family: "GeistMono", "LXGWWenKai";
   padding: 2px 8px;
   vertical-align: baseline;
   font-size: 0.9rem;
@@ -287,7 +334,7 @@ hr {
 
 /* FOOTNOTE */
 sup.md-footnote {
-  font-family: "GeistMono";
+  font-family: "GeistMono", "LXGWWenKai";
   color: var(--v-gray-800);
 }
 
@@ -318,7 +365,7 @@ sup.md-footnote {
 /* INLINE CODE */
 #write code {
   padding: 2px 4px;
-  font-family: "GeistMono";
+  font-family: "GeistMono", "LXGWWenKai";
   font-size: 0.9rem;
   background-color: var(--v-gray-500);
   border-radius: 4px;
@@ -333,10 +380,15 @@ ul {
   content: "";
   position: absolute;
   left: -16px;
-  top: 13px;
+  top: 11.5px;
   width: 9px;
   height: 2px;
-  background-color: var(--v-gray-800);
+  background-color: #3d3d3d;
+}
+
+#write ul li.md-task-list-item::before {
+  content: "";
+  background-color: transparent;
 }
 
 /* IMAGE */
@@ -350,7 +402,6 @@ img {
 /* TABLE */
 #write table {
   margin: 15px auto;
-  max-width: 80%;
   line-height: 1.6em;
   font-size: 0.875rem;
   color: var(--v-gray-1000);
@@ -363,7 +414,7 @@ table td {
 }
 
 thead th {
-  padding: 12px 10px;
+  padding: 10px 10px;
   margin-bottom: 2px;
   font-weight: 400;
   color: var(--v-gray-900);
@@ -431,8 +482,8 @@ thead::after {
 }
 .md-fences::before {
   position: absolute;
-  left: 13px;
-  top: 13px;
+  left: 12px;
+  top: 12px;
   content: "";
   width: 13px;
   height: 13px;
@@ -441,13 +492,12 @@ thead::after {
   box-shadow: 22px 0px #ffbd2e, 44px 0px #27c93f;
 }
 
-.CodeMirror {
-  font-family: "GeistMono";
+#write .CodeMirror {
+  font-family: "GeistMono", "LXGWWenKai";
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.4rem;
   color: var(--v-gray-400);
-  background-color: var(--v-background);
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
 }
@@ -461,7 +511,7 @@ thead::after {
 }
 
 .md-fences .code-tooltip {
-  font-family: 'GeistMono';
+  font-family: "GeistMono", "LXGWWenKai";
   border-radius: 4px;
   border: 1px solid var(--v-gray-500);
   background-color: var(--v-white-200);
@@ -473,15 +523,19 @@ thead::after {
   border: none;
 }
 
-.CodeMirror-activeline-background {
-  background: #2c313c !important;
+#write .CodeMirror-activeline-background {
+  background: #2c313c;
 }
 
+#write .md-mathblock-panel .CodeMirror-activeline-background {
+  background: var(--v-gray-400);
+}
 
 .cm-s-inner .CodeMirror-selected {
   border-radius: 2px;
   background-color: #404859 !important;
 }
+
 .cm-s-inner .CodeMirror-selectedtext {
   background-color: transparent !important;
 }
@@ -544,4 +598,13 @@ thead::after {
 }
 .cm-link {
   color: #61afef !important;
+}
+
+.cm-header {
+  color: #e06c63 !important;
+}
+
+/* SOURCE MODE */
+#typora-source .CodeMirror-lines {
+  font-family: "GeistMono", "LXGWWenKaiMono";
 }
