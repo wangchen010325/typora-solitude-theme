@@ -6,7 +6,7 @@ The Vercel theme employs Geist as the primary font, with Inter as the italic var
 
 ## Install
 
-1. [Download]() the zipped project package from Github.
+1. [Download](https://github.com/wangchen010325/typora-vercel-theme/releases/download/v1.0/typora-vercel-theme-v1.0.zip) the zipped project package from Github.
 
 2. Copy the `vercel.css` file and `vercel` folder to your Typora theme library.
 
